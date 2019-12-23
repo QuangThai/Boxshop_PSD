@@ -1,0 +1,56 @@
+.team {
+    margin: 5% 0;
+    h5 {
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin: 2%;
+    }
+    .team__item{
+        border: 1px solid $color_white_2;
+        .team__image{
+            position: relative;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                transition: all .4s;
+            }
+            .team__social {
+                position: absolute;
+                bottom: -18%;
+                left: 2%;
+                width: 96%;
+                background-color: $color_white_3;
+                transition: all .4s;
+                z-index: 100;
+                i {
+                    padding: 4%;
+                }
+            }
+            &:hover img{
+                transform: scale(1.1);
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: rgba(0,0,0, 0);
+                z-index: 10;
+            }
+            &:hover:before {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+            &:hover .team__social {
+                bottom: 2%;
+            }
+        }
+    }
+    .team__content {
+        padding: 5%;
+        p {
+            color: $color_black_2;
+            font-style: italic;
+        }
+    }
+}

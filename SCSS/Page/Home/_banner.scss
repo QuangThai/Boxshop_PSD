@@ -1,0 +1,29 @@
+.banner {
+    background-image: url('/img/bg-feature-organic.jpg');
+    height: 50vh;
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: $mg_5;
+    .banner__info {
+        margin: 0 auto;
+        text-align: center;
+        color: $color_black_2;
+        width: 40%;
+        padding-top: 2%;
+        p {
+            padding: 4% 0;
+            margin-bottom: 0;
+        }
+        .btn__shopnow {
+            margin-top: 0;
+            color: $color_green;
+            background-color: transparent;
+            border: 1px solid $color_green;
+            &:hover {
+                background-color: $color_green;
+                color: $color_white_1;
+            }
+        }
+    }
+}

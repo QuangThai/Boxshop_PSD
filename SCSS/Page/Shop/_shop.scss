@@ -1,0 +1,47 @@
+.shop {
+    .sort__filter {
+        .sort {
+            i {
+                margin-right: 5px;
+                border: 1px solid $color_white_4;
+                padding: .8em;
+                color: $color_black_2;
+                &:hover {
+                    color: $color_green;
+                    border-color: $color_green;
+
+                }
+            }
+            .sort__select {
+                border: 1px solid $color_white_4;
+                padding: .52em;
+
+            }
+        }
+    }
+    .filter {
+        .showing {
+            border-right: 1px solid $color_white_4;
+        }
+        .filter__bar {
+            a {
+                color: $color_green;
+            }
+        }
+    }
+    .shop__items {
+        .item {
+            @include products__items;
+        }
+    }
+}
+
+.pagination {
+    .active {
+        background: $color_green;
+        color: white !important;
+        &:focus {
+            color: white !important;
+        }
+    }
+}

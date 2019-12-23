@@ -1,0 +1,16 @@
+.blockquote {
+    position: relative;
+    color: $color_black_2;
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 25px;
+    text-indent: 5%;
+    &:before {
+        content: "\201C";
+        position: absolute;
+        font-size: 2.5rem;
+        top: 0;
+        left: -5px;
+        font-weight: bold;
+    }
+}

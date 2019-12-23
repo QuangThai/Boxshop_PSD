@@ -1,0 +1,19 @@
+.blog__button__green {
+    background-color: $color_green;
+    border: 1px solid $color_green;
+    padding: 3% 5%;
+    a {
+        font-weight: bold;
+        font-size: .9rem;
+        color: $color_white_1;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: transparent;
+        a {
+            color: $color_green;
+        }
+        outline: none;
+    }
+}

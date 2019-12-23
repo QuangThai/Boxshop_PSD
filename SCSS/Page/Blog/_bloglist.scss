@@ -1,0 +1,17 @@
+.blog {
+    article {
+        margin-bottom: 20%;
+    }
+    .blog__quote {
+        background-color: rgba(194,194,194,0.2);
+        padding: 8%;
+        color: $color_black_2;
+        font-size: .95rem;       
+        .author {
+            a{
+                color: $color_green;
+            }
+        }
+    }
+}
+

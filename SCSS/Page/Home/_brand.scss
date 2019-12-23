@@ -1,0 +1,47 @@
+.brand {
+    position: relative;
+    margin-top: $mg-5;
+    background-color: $color_white_3;
+    padding: 3% 0;
+    .brand-carousel {
+        cursor: pointer;
+        .item {
+            img {
+                width: 70%;
+            }
+        }
+        .owl-nav {
+            .owl-prev, .owl-next {
+                position: absolute;
+                top: -50%;
+                font-size: 5rem;
+                outline: none;
+                background: transparent;
+                color: $color_black_2;
+                opacity: 0;
+            }
+            .owl-prev {
+                left: -5%;
+            }
+            .owl-next {
+                right: -5%;
+            }
+        }
+        &:hover .owl-nav{
+            .owl-prev, .owl-next{
+                opacity: 1;
+                transition: all .3s;
+                &:hover {
+                    color: $color_black_1;
+                }
+            }
+            .owl-prev {
+                left: 0;
+            }
+            .owl-next {
+                right: 0;
+            }
+        }
+    }
+
+}

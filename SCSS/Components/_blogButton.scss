@@ -1,0 +1,12 @@
+.blog__button {
+    background-color: transparent;
+    border: 1px solid $color_black_2;
+    padding: 2% 4%;
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgb(102, 100, 100);
+    &:hover {
+        background-color: $color_black_5;
+        color: $color_white_1;
+    }
+}

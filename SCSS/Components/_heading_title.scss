@@ -1,0 +1,28 @@
+/*----------------------------
+        HEADING TITLE
+ ----------------------------*/
+ 
+ .heading__title {
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3%;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 40%;
+        height: 1px;
+        border: 1px solid $color_white_3;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 40%;
+        height: 1px;
+        border: 1px solid $color_white_3;
+    }
+}

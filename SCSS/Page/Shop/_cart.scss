@@ -1,0 +1,128 @@
+.cart {
+    margin: 4% 0;
+    .amount {
+        color: $color_green;
+        font-weight: bold;
+    }
+    .cart__table {
+        width: 100%;
+        border: 1px solid $color_white_2;
+        thead {
+            color: $color_white_1;
+            background-color: $color_green;
+            th{
+                padding: 1.5% 0;
+            }
+        }
+        .cart__body {
+            .cart__item {
+                // border-bottom:1px solid $color_white_2;
+                & > * {
+                    padding: 30px;
+                    vertical-align: middle;
+                    text-align: center;
+                }
+                .cart__thumbnail {
+                    text-align: center;
+                    img {
+                        width: 100px;
+                        height: 114px;
+                    }
+                }
+                .cart__name {
+                    text-align: left;
+                    padding-left: 0;
+                    a {
+                        text-decoration: none;
+                        color:$color_black_1;
+                        font-size: .9rem;
+                    }
+                }
+                .cart__quantity {
+                    .quantity{
+                        input {
+                            height: 41px;
+                            width: 50px;
+                            text-align: center;
+                            outline: none;
+                            color: $color_black_2;
+                            border:1px solid $color_white_4;
+                        }
+                        .plus__minus{
+                            cursor: pointer;
+                            font-weight: bold;
+                            border:1px solid $color_white_4;
+                            border-left: none;
+                            border-bottom: none;               
+                            a{
+                                display: block;
+                                background-color: transparent;
+                                &:hover {
+                                    opacity: .5;
+                                }
+                            }
+                            .btn__plus, .btn__minus{
+                                width: 20px;
+                                height: 20px;
+                                border-bottom:1px solid $color_white_4;
+                            }              
+                        }
+                    }            
+                }
+                .cart__remove {
+                    .btn__remove {
+                        height: 24px;
+                        width: 24px;
+                        border:1px solid $color_black_2;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        .remove {
+                            color: $color_black_1;
+                            text-decoration: none;
+                        }
+                        &:hover {
+                            border-color: red;
+                            .remove {
+                                color: red;
+                            }
+                        }
+                    }
+
+                }
+            }   
+            .cart__footer {
+                .cart__coupon{
+                    padding: 30px;                 
+                    input {
+                        width: 50%;
+                        padding: 1.8%;
+                        border: none;
+                        border: 1px solid $color_white_2;
+                        outline: none;
+                        &::placeholder {
+                            color: $color_black_2;
+                        }
+                    }
+                }
+                .cart__update {
+                    padding: 30px;                 
+                }
+            }       
+        }
+    }
+    .cart__total {
+        background-color: rgba(232,232,232,0.5);
+        .table__total {
+            .total__header {
+                font-size: .9rem;
+                font-weight: bold;
+                border-top: none;
+            }
+            button {
+                width: 100%;
+                margin: 2% 0;
+            }
+        }
+    }
+
+}

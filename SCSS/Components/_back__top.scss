@@ -1,0 +1,16 @@
+#back__top {
+    font-size: 1.5rem;
+    position: fixed;
+    color: white;
+    right: 0;
+    bottom: 0;
+    padding: .5% .8%;
+    cursor: pointer;
+    background-color: $color_black_5;
+    display: none;
+    z-index: 1000;
+    &:hover {
+        background-color: $color_green;
+    }
+
+}

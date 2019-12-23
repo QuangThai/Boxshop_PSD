@@ -1,0 +1,18 @@
+.blog__button__inverse {
+    background-color: $color_black_5;
+    border: 1px solid $color_black_2;
+    padding: 3% 5%;
+    a {
+        font-weight: bold;
+        font-size: .9rem;
+        color: $color_white_1;
+        text-decoration: none;
+    }
+    &:hover {
+        background-color: transparent;
+        a {
+            color: $color_black_2;
+        }
+        outline: none;
+    }
+}

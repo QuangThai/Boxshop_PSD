@@ -1,0 +1,33 @@
+.item__descript {
+    margin-bottom: 3%;
+    .des__content {
+        border: 1px solid $color_white_2;
+        .nav {
+            padding: 1%;
+            border-bottom: 1px solid $color_white_2;
+            .nav-item {
+                a{
+                    color: $color_black_1;
+                    border: 1px solid $color_white_2;
+                    border-radius: 0;
+                }
+                a.active {
+                    background-color: $color_black_1;
+                    color: $color_white_1;
+                }
+            }
+        }
+        .tab-content {
+            padding-bottom: 2%;
+            h6{
+                font-weight: bold;
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+            p {
+                color: $color_black_2;
+                line-height: 25px;
+            }
+        }
+    }
+}

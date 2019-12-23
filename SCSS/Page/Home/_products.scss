@@ -1,0 +1,44 @@
+.products {
+    .products__items {
+        @include products__items;
+        .owl-nav {
+            .owl-prev, .owl-next  {
+                position: absolute;
+                top: 41%;
+                font-size: 2rem;
+                outline: none;
+                opacity: 0;
+                transition: all .5s;
+            }
+            .owl-prev {
+                left: -50px;
+            }
+            .owl-next {
+                right: -50px;
+            }
+            span {
+                padding: 0 15px;
+                color: #bbb;
+                border: 1px solid #bbb;
+                background-color: $color_white_1;
+                &:hover {
+                    color: $color_black_1;
+                    border: 1px solid $color_black_1;
+                    background-color: $color_white_1;
+                }
+            }
+        }
+        &:hover {
+            .owl-nav {
+                .owl-prev {
+                    left: -5px;
+                    opacity: 1;
+                }
+                .owl-next {
+                    right: -5px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.footer {
+    color: $color_white_1;
+    font-size: .9rem;
+    .footer__top {
+        background-color: $color_black_3;
+        padding: 4% 0;
+        .footer__menu {
+            list-style: none;
+            margin-top: 20%;
+            li {
+                margin-bottom: 8%;
+                a {
+                    color: $color_white_1;
+                    text-decoration: none;
+                }
+            }
+        }
+        .footer__title {
+            color: $color_white_1;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 6%;
+        }
+    }
+    .footer__bottom {
+        background-color:$color_black_4;
+        padding: 15px 0;
+        color: $color_white_4;
+        .copyright {
+            padding-top: 20px;
+        }
+    }
+}

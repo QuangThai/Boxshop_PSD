@@ -1,0 +1,89 @@
+.box__carousel {
+    position: relative;
+    margin-top: 156px;
+    img {
+        width: 100%;
+    }
+    .carousel {
+        width: auto;
+        .carousel-inner {
+            .carousel-item {
+                .carousel__content {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    width: 33%;
+                    color: $color_white_1;
+                    h5 {
+                        font-weight: 600;
+                    }
+                    h1 {
+                        font-weight: bold;
+                        font-size: 3.8em;
+                    }
+                    p {
+                        color: $color_white_2;
+                    }
+                }
+            }
+        }
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                background-image: none;
+                i {
+                    position: absolute;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    background-color:$color_white_1;
+                    color: $color_black_1;
+                    line-height: 50px;
+                    font-size: 1.5em;
+                    &:hover {
+                        background-color: $color_black_1;
+                        color: $color_white_1;
+                    }
+                }
+            }
+            .carousel-control-prev-icon i {
+                top: 50%;
+                left: 10%;
+            }
+            .carousel-control-next-icon i {
+                top: 50%;
+                right: 10%;
+            }
+    }
+}
+
+.carousel-control-next, .carousel-control-prev {
+opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+    .box__carousel {
+        img {
+            width: 130%;
+        }
+    }
+    .carousel {
+        .carousel-inner {
+            .carousel-item {
+                .carousel__content {
+                    h5 {
+                        font-size: .8rem;
+                    }
+                    h1 {
+                        font-size: 2.5rem !important;
+                    }
+                    p {
+                        font-size: .8rem;
+                        color: $color_white_2;
+                    }
+                }
+            }
+        }
+    }
+}

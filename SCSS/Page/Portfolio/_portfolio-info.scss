@@ -1,0 +1,90 @@
+.portfolio__info {
+    margin: 3% 0;
+    .portfolio__img {
+        img {
+            width: 100%;
+        }
+    }
+    .portfolio__content {
+        h2 {
+            font-weight: bold;
+            font-size: 1.6rem;
+            margin-bottom: 5%;
+        }
+        p {
+            margin-bottom: 5%;
+            font-size: 1rem;
+            color: $color_black_2;
+        }
+        h6 {
+            font-weight: 600;
+            font-size: .9rem;
+            color: rgb(81, 81, 81);
+        }
+    }
+    .portfolio__like {
+        i {
+            font-size: 1.2rem;
+            padding: 10px;
+            border: 1px solid $color_black_1;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color .5s;
+            &:hover {
+                border: none;
+                background-color: $color_green;
+                color: $color_white_1;
+            }
+        }
+    }
+    .portfolio__social {
+        ul {
+            li {
+                margin-right: 3px;
+                background-color: $color_white_3;
+                height: 40px;
+                width: 40px;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+                &:hover {
+                    color: white;
+                    &:first-child {
+                        background-color: #3B5998;
+                    }
+                    &:nth-child(2) {
+                        background-color: #2caae1;
+                    }
+                    &:nth-child(3) {
+                        background-color: #cb2027;
+                    }
+                    &:nth-child(4) {
+                        background-color: #DD4B39;
+                    }
+                    &:nth-child(5) {
+                        background-color: #0177B5;
+                    }
+                    &:last-child {
+                        background-color: #516AE8;
+                    }
+                }
+            }
+        }
+    }
+    .portfolio__button {
+        margin-top: 7%;
+        .project__button {
+            border: 1px solid $color_white_4;
+            padding: 10px;
+            text-decoration: none;
+            color: $color_black_3;
+            font-weight: 600;
+            font-size: .95rem;
+            &:hover {
+                background-color: $color_black_5;
+                color: $color_white_1;
+                border: $color_white_4;
+            }
+        }
+    }
+}

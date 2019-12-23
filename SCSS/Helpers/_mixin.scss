@@ -1,0 +1,222 @@
+/*--------------------------
+        HOVER MENU
+ --------------------------*/
+
+@mixin hover__menu($top, $left, $width, $minheight) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: $width;
+    min-height: $minheight;
+    display: none;
+    z-index: 10;
+}
+ @mixin hover__menu__item($top, $width, $right) {
+    position: absolute;
+    top: $top;
+    width: $width;
+    border: 1px solid $color_white_3;
+    padding: $pd_2;
+    background: $color_white_1;
+    ul {
+        position: relative;
+        list-style: none;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: -7px;
+        right: $right;
+        height: 15px;
+        width: 15px;
+        border: 1px solid $color_white_3;
+        transform: rotate(45deg);
+        border-right: 1px solid $color_white_1;
+        border-bottom: 1px solid $color_white_1;
+        background: $color_white_1;
+    }
+    a {
+        text-decoration: none;
+        color: $color_black_2;
+        &:hover {
+            color: $color_green;
+        }
+    }
+}
+
+@mixin hover__menu__big {
+    h6 {
+        position: relative;
+        font-weight: bold;
+        font-size: .9rem;
+        padding: $pd_1 0;
+        &:after{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            border: .5px solid $color_white_2;
+            height: .5px;
+            width:  70%;
+        }
+        a {
+            color: $color_black_1;
+        }
+    }
+    li {
+        padding-bottom : $pd_2;
+    }
+}
+
+/*----------------------------
+            PRODUCTS
+ ----------------------------*/
+
+    @mixin products__thumbnail($width, $height) {
+        position: relative;
+        width: $width;
+        height: $height;
+        border: 1px solid $color_white_2;
+        img {
+            width: 100%;
+        }
+        &:before {
+            position: absolute;
+            content:'';
+            background: rgba(0,0,0, 0);
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transition: all .5s;
+        }
+        &:hover:before {
+            background: rgba(0,0,0, 0.5);
+            cursor: pointer;
+        }                                       
+    } 
+
+    @mixin products__info {
+        text-align: center;
+        margin-top: 5%;
+        a {
+            text-decoration: none;
+            color: $color_black_2;
+        }
+        .rating {
+            color: $color__yellow;
+            padding: 5px 0;
+            font-size: .7rem;
+        } 
+        .old__price {
+            color: $color_black_2;
+            text-decoration: line-through;
+            font-weight: bold;
+            font-size: .8rem;
+            margin-right: 3%;
+        }
+        .price {
+            color: $color_green;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    }
+
+    @mixin products__items {
+        position: relative;
+        .products__thumbnail {
+            position: relative;
+            border: 1px solid $color_white_2;
+            padding: 4% 0;
+            cursor: pointer;
+            img {
+                width: 100%
+            }
+            .product_image_back {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: all .4s;
+            }
+            .products_group_button {
+                position: absolute;
+                top: 3%;
+                right: -5%;
+                z-index: 10;
+                opacity: 0;
+                transition: all .5s;
+                .products_group_item {
+                    position: relative;
+                    padding: 7px $pd_1;
+                    margin: 3% 0;
+                    background-color: $color_white_1;
+                    border: 1px solid $color_white_2;
+                    text-align: center;
+                    a {
+                        color: $color_green;                       
+                    }
+                    span {
+                        position: absolute;
+                        top: 0;
+                        left: -330%;
+                        height: 100%;
+                        width: 130px;
+                        font-size: .9rem;
+                        color: $color_white_1;
+                        line-height: 40px;
+                        background-color: $color_green;
+                        opacity: 0;
+                        transition: all .5s;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 10px;
+                            height: 10px;
+                            border: 1px solid $color_green;
+                            background: $color_green;
+                            right: -5px;
+                            top: 12px;
+                            transform: rotate(45deg);
+                        }
+                    }
+                    &:hover {
+                        background-color: $color_green;
+                        a {
+                            color: $color_white_1;
+                        }
+                        span {
+                            opacity: 1;
+                            left: -370%;
+                        }
+                    }
+                }
+            }
+            &:before {
+                position: absolute;
+                content:'';
+                background: rgba(0,0,0, 0);
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                transition: all .5s;
+            }
+            &:hover:before {
+                background: rgba(0,0,0, 0.1);
+            }
+            &:hover {
+                .product_image_back{
+                    opacity: 1;
+                }
+                .products_group_button {
+                    opacity: 1;
+                    right: 3%;
+                }
+            }
+        }
+        .products__info {
+           @include products__info;
+        }
+    }
